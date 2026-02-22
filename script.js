@@ -102,28 +102,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// 6. Reproductor de Audio on Hover
-  const audioBtn = document.getElementById('hover-audio-btn');
-  const audioEl = document.getElementById('showcase-audio');
+// 6. Manejo Inteligente de Audio
+const audioEl = document.getElementById('showcase-audio');
+const audioBtn = document.getElementById('hover-audio-btn');
+const errorMsg = document.getElementById('audio-error-msg');
 
-  if (audioBtn && audioEl) {
-    audioBtn.addEventListener('mouseenter', () => {
-      // Intenta reproducir el audio. Algunos navegadores bloquean el autoplay
-      // si el usuario no ha interactuado con la página primero.
-      let playPromise = audioEl.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("La reproducción automática fue prevenida por el navegador.");
-        });
-      }
-    });
+if (audioBtn && audioEl) {
+  audioBtn.addEventListener('mouseenter', () => {
+    const playPromise = audioEl.play();
 
-    audioBtn.addEventListener('mouseleave', () => {
-      audioEl.pause();
-      audioEl.currentTime = 0; // Reinicia la pista al quitar el mouse
-    });
-  }
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // Si entramos aquí, es porque el navegador bloqueó el audio
+        console.warn("Reproducción bloqueada. Mostrando aviso al usuario.");
+        if (errorMsg) {
+          errorMsg.classList.remove('hidden');
+        }
+      });
+    }
+  });
 
+  audioBtn.addEventListener('mouseleave', () => {
+    audioEl.pause();
+    audioEl.currentTime = 0;
+  });
+}
+
+// Acción para desbloquear cuando el usuario haga clic en el mensaje
+if (errorMsg) {
+  errorMsg.addEventListener('click', () => {
+    errorMsg.classList.add('hidden'); // Ocultar mensaje
+    // Al hacer este clic, el navegador ya "confía" en el sitio
+    console.log("Audio desbloqueado por el usuario.");
+  });
+}
 
 // 7. Manejo del Formulario de Contacto
 const contactForm = document.querySelector('.contact-form');
@@ -156,6 +168,7 @@ if (contactForm && feedback) {
 
   
 });
+
 
 
 
