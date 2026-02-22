@@ -153,45 +153,9 @@ if (contactForm && feedback) {
   });
 }
 
-// 8. Desbloqueo de Audio por Interacción
-const audioOverlay = document.getElementById('audio-unlock-overlay');
-const showcaseAudio = document.getElementById('showcase-audio');
-
-if (audioOverlay) {
-  // Escuchar clic en toda la ventana
-  window.addEventListener('click', () => {
-    // Ocultar el aviso
-    audioOverlay.classList.add('hidden');
-    
-    // "Cargar" el audio silenciosamente para que el navegador lo marque como listo
-    if (showcaseAudio) {
-      showcaseAudio.load(); 
-    }
-  }, { once: true }); // El evento solo se ejecuta una vez
-}
-
-// Actualiza tu sección de hover para que sea más robusta
-const audioBtn = document.getElementById('hover-audio-btn');
-
-if (audioBtn && showcaseAudio) {
-  audioBtn.addEventListener('mouseenter', () => {
-    const playPromise = showcaseAudio.play();
-    
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        // Si aún así falla, el error será silencioso
-        console.log("Audio pausado esperando interacción.");
-      });
-    }
-  });
-
-  audioBtn.addEventListener('mouseleave', () => {
-    showcaseAudio.pause();
-    showcaseAudio.currentTime = 0;
-  });
-}
 
   
 });
+
 
 
