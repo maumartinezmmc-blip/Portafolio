@@ -420,3 +420,30 @@ input:focus, textarea:focus { outline: none; border-color: var(--copper); }
 
 }
 
+
+.audio-error-popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4d; /* Rojo de advertencia */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  z-index: 3000;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { bottom: -100px; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+.audio-error-popup.hidden {
+  display: none;
+}
+
+
