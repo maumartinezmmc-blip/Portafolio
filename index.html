@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Martínez</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <div class="aperture-bg" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none" stroke="rgba(184, 115, 51, 0.15)" stroke-width="0.5">
+      <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" />
+      <line x1="10" y1="30" x2="60" y2="15" />
+      <line x1="90" y1="30" x2="90" y2="60" />
+      <line x1="90" y1="70" x2="40" y2="85" />
+      <line x1="10" y1="70" x2="10" y2="40" />
+      <line x1="50" y1="90" x2="80" y2="50" />
+      <line x1="50" y1="10" x2="20" y2="50" />
+      <circle cx="50" cy="50" r="15" />
+    </svg>
+  </div>
+
+  <nav class="navbar" aria-label="Navegación Principal">
+    <div class="logo">Portafolio</div>
+    <button class="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <ul id="nav-menu" class="nav-links">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Biografía</a></li>
+      <li><a href="#experience">Trayectoria</a></li>
+      <li><a href="#portfolio">Trabajo destacado</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-carousel" aria-label="Carrusel de proyectos destacados">
+      <div class="carousel-track" id="hero-track">
+        <div class="carousel-slide">
+          <img src="img/fon/fon_1.jpg" alt="Radio" loading="lazy">
+          <div class="slide-overlay"></div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/fon/fon_2.jpeg" alt="National" loading="lazy">
+          <div class="slide-overlay"></div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/fon/fon_3.jpg" alt="Reportaje" loading="lazy">
+          <div class="slide-overlay"></div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/fon/fon_4.png" alt="Producción" loading="lazy">
+          <div class="slide-overlay"></div>
+        </div>
+
+        
+      </div>
+       <!--
+      <button class="carousel-btn prev" aria-label="Ver imagen anterior">&#10094;</button>
+      <button class="carousel-btn next" aria-label="Ver imagen siguiente">&#10095;</button>
+      -->
+    
+    </div>
+    
+    <div class="hero-content fade-in-up">
+      <h1 class="display-title">Daniel<br>Martínez</h1>
+      <p class="subtitle">Productor Audiovisual • Radio • Campañas Políticas</p>
+      <div class="cta-group">
+        <a href="#portfolio" class="btn btn-primary">Ver Portafolio</a>
+        <a href="#contact" class="btn btn-outline">Agendar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section about-section">
+    <div class="container about-grid">
+      <div class="about-image-wrapper fade-in-up">
+        <div class="about-image-frame"></div>
+        <img src="img/mau_1.png" alt="Daniel Martínez Portrait" class="about-img">
+      </div>
+      <div class="about-text fade-in-up">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Detrás de la Lente</h2>
+        <p class="about-description">
+          Soy una persona multifuncional, con gran capacidad de aprendizaje y adaptación a diferentes entornos, incluso bajo presión. Me motiva alcanzar múltiples metas y disfruto adquirir nuevos conocimientos que fortalezcan mi desarrollo profesional.
+        </p>
+        <p class="about-description">
+          A lo largo de mi experiencia laboral, he desempeñado cargos de responsabilidad, superando con éxito los retos que se me han presentado y aportando resultados positivos a cada proyecto. 
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Años de Exp.</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Proyectos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Trayectoria Profesional</h2>
+      <div class="timeline">
+
+
+        <article class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <h3>Party Maker P:M / Productor</h3>
+            <span class="date">Agosto 2018 - Presente</span>
+            <p>Especialista en comunicación visual con experiencia como fotógrafo y camarógrafo, integrando el guionismo para estructurar narrativas de alto impacto. Como consultor de imagen, optimizo la proyección profesional mediante el análisis del lenguaje corporal, alineando la estética visual con la intención estratégica del mensaje.
+
+            </p>
+          </div>
+        </article>
+
+
+        <article class="timeline-item fade6-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <h3>TIFANY&CO / Asistente operativo </h3>
+            <span class="date">Febrero 2025 – Septiembre 2025</span>
+            <p>Especialista en administración de empresas, con enfoque en la implementación de soluciones logísticas y en la coordinación de personal. Destaco por mi gestión estratégica en el trato con proveedores y el fortalecimiento de la comunicación organizacional, garantizando siempre la coherencia y el prestigio de la imagen corporativa.</p>
+          </div>
+        </article>
+
+
+        <article class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <h3>Alcaldía Cuauhtémoc / Líder Coordinador  </h3>
+            <span class="date">Septiembre 2021 – Abril 2022</span>
+            <p>Líder operativo con experiencia en la coordinación de grupos multidisciplinarios, integrando equipos de comunicación, psicología y atención médica prehospitalaria. Me especializo en la supervisión de actividades y la fomentación del trabajo en equipo, garantizando una atención a la ciudadanía eficiente, empática y de alto impacto en situaciones críticas.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <h3>Radio Trece 1290am / Conductor y reportero de programa de radio  </h3>
+            <span class="date">Marzo 2018 – Agosto 2020</span>
+            <p>Especialista en comunicación con experiencia como reportero de notas periodísticas y en la redacción de contenidos informativos. Me destaco en el planeamiento de estrategias de difusión y en el diseño y edición de contenidos audiovisuales, logrando un impacto multiplataforma mediante una narrativa visual y escrita coherente.</p>
+          </div>
+        </article>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section bg-darker">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Trabajo Destacado</h2>
+      <div class="filter-controls fade-in-up" role="group" aria-label="Filtros de Portafolio">
+        <button class="filter-btn active" data-filter="all">Todo</button>
+        <button class="filter-btn" data-filter="artists">Artistas</button>
+        <button class="filter-btn" data-filter="campaigns">Campañas</button>
+        <button class="filter-btn" data-filter="radio">Radio</button>
+      </div>
+
+      <div class="masonry-grid">
+        <figure class="masonry-item mix campaigns fade-in-up">
+          <img src="img/cam/cam_1.jpg" alt="National Geographic" loading="lazy">
+          <figcaption>
+            <h4>National Geographic</h4>
+            <p>Producción fotografica de conferencia.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix campaigns fade-in-up">
+          <img src="img/cam/cam_2.jpg" alt="Cultura vial" loading="lazy">
+          <figcaption>
+            <h4>Campaña de movilidad</h4>
+            <p>Producción audiovisual de campaña para redes sociales.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix campaigns fade-in-up">
+          <img src="img/cam/cam_3.jpg" alt="Cultura social" loading="lazy">
+          <figcaption>
+            <h4>Campaña social</h4>
+            <p>Producción y acompañamiento de campaña pilares.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix campaigns fade-in-up">
+          <img src="img/cam/cam_5.jpg" alt="Campaña política" loading="lazy">
+          <figcaption>
+            <h4>Campaña política</h4>
+            <p>Producción y desarrollo de campaña política.</p>
+          </figcaption>
+        </figure>
+
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_1.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Talia</h4>
+            <p>Sesión de fotos para flyers.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_2.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Uzielito mix</h4>
+            <p>Sesión de fotos para discografía.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_3.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Carlos Trejo</h4>
+            <p>Sesión de fotos de grupo musical.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_4.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Dani Flow</h4>
+            <p>Sesión de fotos para discografía.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_5.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Divaza</h4>
+            <p>Sesión de fotos de alfombra roja.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_6.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Reyli Barba</h4>
+            <p>Producción de presentación de disco.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_7.webp" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Niña Fresa</h4>
+            <p>Sesión de fotos para redes sociales.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_8.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Lyn May</h4>
+            <p>Producción en estación de radio.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_9.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Enamorandonos</h4>
+            <p>Sesión de fotos para programa enamorandonos.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix artists fade-in-up">
+          <img src="img/art/art_10.jpg" alt="Detrás de escena de video musical" loading="lazy">
+          <figcaption>
+            <h4>Fred Roldán</h4>
+            <p>Producción audiovisual de estación de radio.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item mix radio fade-in-up">
+          <img src="img/rad/rad_1.jpg" alt="Cabina de radio" loading="lazy">
+          <figcaption>
+            <h4>Programa de espectáculos.</h4>
+            <p>Conducción y producción audio visual de espectáculos.</p>
+          </figcaption>
+        </figure>
+
+
+        <figure class="masonry-item mix radio fade-in-up">
+          <img src="img/rad/rad_2.jpg" alt="Cabina de radio" loading="lazy">
+          <figcaption>
+            <h4>Programa de noticias.</h4>
+            <p>Conducción y producción audio visual de noticiero.</p>
+          </figcaption>
+        </figure>
+
+
+
+        <figure class="masonry-item mix radio fade-in-up">
+          <img src="img/rad/rad_3.jpg" alt="Cabina de radio" loading="lazy">
+          <figcaption>
+            <h4>Programa de deportes.</h4>
+            <p>Conducción y producción audio visual de deportes.</p>
+          </figcaption>
+        </figure>
+
+
+
+        <figure class="masonry-item mix radio fade-in-up">
+          <img src="img/rad/rad_4.jpg" alt="Cabina de radio" loading="lazy">
+          <figcaption>
+            <h4>Reportero de nota roja.</h4>
+            <p>Presentador de nota roja.</p>
+          </figcaption>
+        </figure>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="audio-showcase" class="section">
+    <div class="container fade-in-up" style="display: flex; justify-content: center;">
+      <div class="audio-track-btn" id="hover-audio-btn" aria-label="Reproducir pista de audio">
+        <div class="audio-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="waveform">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="audio-text">
+          <span class="audio-title">Escucha mi trabajo</span>
+          <span class="audio-subtitle">Pasa el mouse para reproducir</span>
+        </div>
+        <audio id="showcase-audio" src="audio/mau.MP3" preload="auto"></audio>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container contact-container fade-in-up">
+      <h2 class="section-title">Hagámoslo Realidad</h2>
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre / Empresa</label>
+          <input type="text" id="name" name="name" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="message">Detalles del Proyecto</label>
+          <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+        </div>
+        <div id="form-feedback" class="form-feedback hidden">
+          ¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+<footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-logo">Daniel Martínez</div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/danielmaca__?igsh=MXhpMmxyZ3RqcmhxZg==" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://www.linkedin.com/in/daniel-maca-7ba1451b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://x.com/SoyDanielMaca" target="_blank" rel="noopener" aria-label="X">Twitter</a>
+      </div>
+      <p class="copyright">&copy; 2026 Daniel Martínez. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+
+</html>
