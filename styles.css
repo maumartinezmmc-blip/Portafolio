@@ -417,4 +417,42 @@ input:focus, textarea:focus { outline: none; border-color: var(--copper); }
 .form-feedback.hidden {
   display: none;
   opacity: 0;
+
+}
+
+.audio-unlock-overlay {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(184, 115, 51, 0.9); /* Color cobre */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  z-index: 2000;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.audio-unlock-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.unlock-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.unlock-icon {
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
